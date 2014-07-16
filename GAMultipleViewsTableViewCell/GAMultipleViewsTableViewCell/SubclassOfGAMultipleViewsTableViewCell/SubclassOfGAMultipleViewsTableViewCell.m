@@ -61,7 +61,7 @@
     
     NSArray *viewsToShow = [NSArray arrayWithObjects:firstView, secondView, thirdView, nil];
 */
-    [self reloadWithViews:viewsToShow andCircularPaging:NO andShowViewAtIndex:1 animated:NO];
+    [self reloadWithViews:viewsToShow andCircularPaging:YES andShowViewAtIndex:1 animated:NO];
 }
 
 
