@@ -95,7 +95,6 @@
     CGSize contentSize = CGSizeMake(currentX, maxY);
     [multipleViewsScrollView setContentSize:contentSize];
     self.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
-    multipleViewsScrollView.backgroundColor = [[UIColor cyanColor] colorWithAlphaComponent:0.3];
     
     [self showViewAtIndex:showViewAtIndex animated:animated];
 }
