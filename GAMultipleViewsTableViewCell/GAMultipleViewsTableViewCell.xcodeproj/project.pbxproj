@@ -25,6 +25,9 @@
 		B61EC727197406C7004B3104 /* GAMultipleViewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61EC726197406C7004B3104 /* GAMultipleViewsTableViewCell.m */; };
 		B61EC73219740A0B004B3104 /* SubclassOfGAMultipleViewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61EC73119740A0B004B3104 /* SubclassOfGAMultipleViewsTableViewCell.m */; };
 		B61EC73419740A17004B3104 /* SubclassOfGAMultipleViewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61EC73319740A17004B3104 /* SubclassOfGAMultipleViewsTableViewCell.xib */; };
+		B6ABE31E1976781900B06245 /* BSD_LICENSE_of_GAMultiScrollingView.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6ABE31B1976781900B06245 /* BSD_LICENSE_of_GAMultiScrollingView.txt */; };
+		B6ABE31F1976781900B06245 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B6ABE31C1976781900B06245 /* LICENSE */; };
+		B6ABE3201976781900B06245 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B6ABE31D1976781900B06245 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		B61EC73019740A0B004B3104 /* SubclassOfGAMultipleViewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassOfGAMultipleViewsTableViewCell.h; sourceTree = "<group>"; };
 		B61EC73119740A0B004B3104 /* SubclassOfGAMultipleViewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassOfGAMultipleViewsTableViewCell.m; sourceTree = "<group>"; };
 		B61EC73319740A17004B3104 /* SubclassOfGAMultipleViewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubclassOfGAMultipleViewsTableViewCell.xib; sourceTree = "<group>"; };
+		B6ABE31B1976781900B06245 /* BSD_LICENSE_of_GAMultiScrollingView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSD_LICENSE_of_GAMultiScrollingView.txt; sourceTree = "<group>"; };
+		B6ABE31C1976781900B06245 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B6ABE31D1976781900B06245 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 		B61EC724197406BE004B3104 /* GAMultipleViewsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				B6ABE31B1976781900B06245 /* BSD_LICENSE_of_GAMultiScrollingView.txt */,
+				B6ABE31C1976781900B06245 /* LICENSE */,
+				B6ABE31D1976781900B06245 /* README.md */,
 				B61EC725197406C7004B3104 /* GAMultipleViewsTableViewCell.h */,
 				B61EC726197406C7004B3104 /* GAMultipleViewsTableViewCell.m */,
 			);
@@ -263,7 +272,10 @@
 				B61EC6FF197404F6004B3104 /* Main_iPad.storyboard in Resources */,
 				B61EC704197404F6004B3104 /* Images.xcassets in Resources */,
 				B61EC73419740A17004B3104 /* SubclassOfGAMultipleViewsTableViewCell.xib in Resources */,
+				B6ABE31F1976781900B06245 /* LICENSE in Resources */,
 				B61EC6FC197404F6004B3104 /* Main_iPhone.storyboard in Resources */,
+				B6ABE31E1976781900B06245 /* BSD_LICENSE_of_GAMultiScrollingView.txt in Resources */,
+				B6ABE3201976781900B06245 /* README.md in Resources */,
 				B61EC6F3197404F6004B3104 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
