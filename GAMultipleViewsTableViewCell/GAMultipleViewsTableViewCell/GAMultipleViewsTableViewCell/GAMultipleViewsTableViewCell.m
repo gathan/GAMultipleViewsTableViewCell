@@ -7,6 +7,7 @@
 //
 
 #import "GAMultipleViewsTableViewCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GAMultipleViewsTableViewCell (){
 
@@ -17,6 +18,7 @@
     UIView *lastView;
     UIPageControl *pageControl;
     BOOL pageControlBeingUsed;
+    UITapGestureRecognizer *collectionViewTgr;
 }
 
 @end
@@ -45,6 +47,12 @@
 #pragma mark - Actions
 
 - (void)reloadWithViews:(NSArray*)viewsArray andCircularPaging:(BOOL)circularPagingEnabled andShowViewAtIndex:(NSInteger)showViewAtIndex animated:(BOOL)animated{
+    
+    if (!collectionViewTgr) {
+        collectionViewTgr = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleCollectionViewTap:)];
+        [multipleViewsScrollView addGestureRecognizer:collectionViewTgr];
+    }
+    
     for (UIView *view in viewsArray) {
         [view removeFromSuperview];
     }
@@ -211,6 +219,16 @@
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:viewToGrab.bounds];
     imageView.image = image;
     return imageView;
+}
+
+- (void)handleCollectionViewTap:(UITapGestureRecognizer*)tgr{
+    UITableView *thisSuperView = (UITableView*)self.superview;
+    while (![thisSuperView isKindOfClass:[UITableView class]]){
+        thisSuperView = (UITableView*)thisSuperView.superview;
+    }
+    
+    NSIndexPath *indexPath = [thisSuperView indexPathForCell:self];
+    [thisSuperView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 @end

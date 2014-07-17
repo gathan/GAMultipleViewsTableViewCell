@@ -16,9 +16,12 @@
 
 @end
 
+@class GAMultipleViewsScrollView;
+
 @interface GAMultipleViewsTableViewCell : UITableViewCell < UIScrollViewDelegate>{
 
     __weak IBOutlet UIScrollView *multipleViewsScrollView;
+    
 }
 
 @property (nonatomic, weak) id<GAMultipleViewsTableViewCellProtocol> delegate;
