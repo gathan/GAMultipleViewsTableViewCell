@@ -228,7 +228,20 @@
     }
     
     NSIndexPath *indexPath = [thisSuperView indexPathForCell:self];
-    [thisSuperView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    if (!self.selected) {
+        [thisSuperView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        if (thisSuperView.delegate && [thisSuperView.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+            [thisSuperView.delegate tableView:thisSuperView didSelectRowAtIndexPath:indexPath];
+        }
+    }else{
+        [thisSuperView deselectRowAtIndexPath:indexPath animated:YES];
+        if (thisSuperView.delegate && [thisSuperView.delegate respondsToSelector:@selector(tableView:didDeselectRowAtIndexPath:)]) {
+            [thisSuperView.delegate tableView:thisSuperView didDeselectRowAtIndexPath:indexPath];
+        }
+        
+    }
+    
+
 }
 
 @end
