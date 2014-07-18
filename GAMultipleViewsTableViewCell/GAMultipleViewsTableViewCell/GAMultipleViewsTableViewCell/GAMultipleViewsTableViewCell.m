@@ -169,7 +169,7 @@
 //    NSLog(pageNumber.stringValue);
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(multipleViewsTableViewCell:didScrollToViewAtIndex:)]) {
-        [self.delegate multipleViewsTableViewCell:self didScrollToViewAtIndex:pageControl.currentPage];
+        [self.delegate multipleViewsTableViewCell:self didScrollToViewAtIndex:pageNumber.integerValue];
     }
     
 
