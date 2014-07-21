@@ -233,9 +233,15 @@
             [thisSuperView.delegate tableView:thisSuperView didSelectRowAtIndexPath:indexPath];
         }
     }else{
+        BOOL shouldDeselect = YES;
+        if (self.delegate && [self.delegate respondsToSelector:@selector(shouldDeselectCell:)]){
+            shouldDeselect = [self.delegate shouldDeselectCell:self];
+        }
+        if (shouldDeselect) {
         [thisSuperView deselectRowAtIndexPath:indexPath animated:YES];
-        if (thisSuperView.delegate && [thisSuperView.delegate respondsToSelector:@selector(tableView:didDeselectRowAtIndexPath:)]) {
-            [thisSuperView.delegate tableView:thisSuperView didDeselectRowAtIndexPath:indexPath];
+            if (thisSuperView.delegate && [thisSuperView.delegate respondsToSelector:@selector(tableView:didDeselectRowAtIndexPath:)]) {
+                [thisSuperView.delegate tableView:thisSuperView didDeselectRowAtIndexPath:indexPath];
+            }
         }
         
     }

@@ -13,6 +13,7 @@
 @protocol GAMultipleViewsTableViewCellProtocol <NSObject>
 
 - (void)multipleViewsTableViewCell:(GAMultipleViewsTableViewCell*)cell didScrollToViewAtIndex:(NSInteger)index;
+- (BOOL)shouldDeselectCell:(GAMultipleViewsTableViewCell*)cell;
 
 @end
 
