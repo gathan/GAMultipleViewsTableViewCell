@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface GAMultipleViewsTableViewCell (){
-
+    
     BOOL circularPaging;
     NSArray *showingViewsArray;
     NSArray *realViewsArray;
@@ -40,7 +40,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -102,7 +102,6 @@
     showingViewsArray = [NSArray arrayWithArray:showingViewsMutableArray];
     CGSize contentSize = CGSizeMake(currentX, maxY);
     [multipleViewsScrollView setContentSize:contentSize];
-    self.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
     
     [self showViewAtIndex:showViewAtIndex animated:animated];
 }
@@ -146,14 +145,14 @@
     NSInteger page = floor((multipleViewsScrollView.contentOffset.x /*- pageWidth / 2*/) / pageWidth);
     pageControl.currentPage = page;
     /*
-    CGRect frame;
-    frame.origin.x = multipleViewsScrollView.frame.size.width * pageControl.currentPage;
-    frame.origin.y = 0;
-    frame.size = multipleViewsScrollView.frame.size;
-    [multipleViewsScrollView scrollRectToVisible:frame animated:YES];
-    */
+     CGRect frame;
+     frame.origin.x = multipleViewsScrollView.frame.size.width * pageControl.currentPage;
+     frame.origin.y = 0;
+     frame.size = multipleViewsScrollView.frame.size;
+     [multipleViewsScrollView scrollRectToVisible:frame animated:YES];
+     */
     
-
+    
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -166,13 +165,13 @@
     CGFloat pageWidth = multipleViewsScrollView.frame.size.width;
     NSInteger page = floor((multipleViewsScrollView.contentOffset.x /*- pageWidth / 2*/) / pageWidth);
     NSNumber *pageNumber = [NSNumber numberWithInt:page];
-//    NSLog(pageNumber.stringValue);
+    //    NSLog(pageNumber.stringValue);
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(multipleViewsTableViewCell:didScrollToViewAtIndex:)]) {
         [self.delegate multipleViewsTableViewCell:self didScrollToViewAtIndex:pageNumber.integerValue];
     }
     
-
+    
     if (circularPaging && (pageNumber.integerValue == 1 || pageNumber.integerValue == showingViewsArray.count - 2)) {
         if (pageNumber.integerValue == 1) {
             [self updateViewAtIndex:showingViewsArray.count-1 withView:[self grabImageViewFromView:lastView]];
@@ -199,7 +198,7 @@
 
 - (IBAction)changePage {
     // update the scroll view to the appropriate page
-
+    
 }
 
 - (UIImageView*)grabImageViewFromView:(UIView*)viewToGrab {
@@ -241,7 +240,7 @@
         
     }
     
-
+    
 }
 
 @end
