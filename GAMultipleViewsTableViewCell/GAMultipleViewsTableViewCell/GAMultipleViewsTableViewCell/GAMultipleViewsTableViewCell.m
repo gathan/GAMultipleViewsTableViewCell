@@ -117,7 +117,7 @@
         }
     }
     NSLog(@"showViewAtCircularIndex");
-    NSLog([[NSNumber numberWithInt:whichOneToShow] stringValue]);
+    NSLog(@"%@",[[NSNumber numberWithInteger:whichOneToShow] stringValue]);
     [multipleViewsScrollView scrollRectToVisible:frameToScrollAt animated:animated];
 }
 
@@ -164,7 +164,7 @@
     
     CGFloat pageWidth = multipleViewsScrollView.frame.size.width;
     NSInteger page = floor((multipleViewsScrollView.contentOffset.x /*- pageWidth / 2*/) / pageWidth);
-    NSNumber *pageNumber = [NSNumber numberWithInt:page];
+    NSNumber *pageNumber = [NSNumber numberWithInteger:page];
     //    NSLog(pageNumber.stringValue);
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(multipleViewsTableViewCell:didScrollToViewAtIndex:)]) {
