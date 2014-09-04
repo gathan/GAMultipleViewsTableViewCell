@@ -249,4 +249,8 @@
     
 }
 
+- (void)setMultipleViewsScrollViewScrollEnabled:(BOOL)enabled{
+    multipleViewsScrollView.scrollEnabled = enabled;
+}
+
 @end

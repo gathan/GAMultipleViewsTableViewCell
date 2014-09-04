@@ -27,5 +27,6 @@
 
 - (void)reloadWithViews:(NSArray*)viewsArray andCircularPaging:(BOOL)circularPaging andShowViewAtIndex:(NSInteger)showViewAtIndex animated:(BOOL)animated;
 - (void)showViewAtIndex:(NSInteger)showViewAtIndex animated:(BOOL)animated;
+- (void)setMultipleViewsScrollViewScrollEnabled:(BOOL)enabled;
 
 @end
